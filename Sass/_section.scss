@@ -1,0 +1,216 @@
+section
+{
+    background-image:url(../Imagenes/background.jpg); 
+    grid-area: body;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: min-content;
+
+    .titulo
+    {
+        color:$color_titulo;
+        font-size: calc(0.5em + 1.5vw);
+        padding: 30px;
+        font-family:$fuente;
+    }
+
+    .parrafo
+    {
+        color:$color_section;
+        font-size: calc(1em + 0.8vw);
+        padding: 40px;
+        font-family:$fuente;
+        align-content: center;
+    }
+
+    .video
+    {
+        padding: 20px;
+        display: flex;
+        width:calc(85vw);
+        justify-content: center;
+    }
+
+    .imagenes
+    {
+        padding: 30px;
+    }
+
+    .clientes1
+    {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 750px)
+    {
+        .clientes1
+        {
+            flex-direction: column;
+        }
+    } 
+
+    .clientes
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .imagenes
+    {
+        width: 100%;
+        margin: 0.5%;
+    }
+    
+    @media screen and (max-width: 750px)
+    {
+    .imagenes
+        {
+        width: 80%;
+        margin: 1%;
+        }
+    } 
+} 
+
+@mixin formato_titulo 
+{
+    font-size: calc(1.5em + 1.5vw);
+    padding: 8%;
+    transform:rotate(350deg); 
+}
+
+@mixin formato_email
+{
+    font-size: calc(0.5em + 1.5vw);
+    padding: 7px;
+    width: 80%;
+    margin: 2%;
+}
+
+.contacto
+{
+    @extend section;
+    justify-content: space-around;
+    flex-direction: row;
+    min-height: min-content;
+
+
+    @media screen and (max-width: 600px)
+    {
+        flex-direction: column;
+    }
+
+    .titulo
+    {
+        @include formato_titulo;
+        color:$color_titulo;
+    }
+
+    .elementos
+    {
+        justify-content: space-around;
+        height: 100%;
+        padding: 5%;
+    }
+
+    .nombre
+    {
+        color:white;
+        font-size: calc(0.5em + 1.5vw);
+        padding: 7px;
+        width: 80%;
+        margin: 2%;
+    }
+
+    .nombre1
+    {
+        width: 60%;
+    }
+
+    input:focus
+    {
+        height: calc(5vw);
+        background-color: rgb(223, 155, 155);
+    }
+
+    .email
+    {
+        @include formato_email;
+        color:white;
+    }
+
+    .email1
+    {
+        width: 70%;
+    }
+
+    .pass
+    {
+        color:white;
+        font-size: calc(0.5em + 1.5vw);
+        padding: 5px;
+        margin: 2%;
+    }
+
+    .pass1
+    {
+        width: 48%;
+    }
+
+    .coment
+    {
+        display: flex;
+        padding: 5px;
+    }
+
+    .coment1
+    {
+        width:calc(35vw);
+        height: calc(15vw);
+        margin: 2%;
+    }
+
+    textarea:focus
+    {
+        background-color: rgb(223, 155, 155);
+    }
+
+    .adj
+    {
+        color:white;
+        font-size: calc(0.5em + 1vw);
+        margin: 2%;
+    }
+
+    .term
+    {
+        color:white;
+        font-size: calc(0.5em + 0.5vw);
+        padding: 10px;
+        margin: 2%;
+    }
+
+    .enviar
+    {
+        color:white;
+        padding: 5px;
+        margin: 2%;
+    }   
+
+    .bot_enviar
+    {
+        font-size: calc(0.5em + 1vw);
+        margin: 2%;
+    }
+
+    .bot_reset
+    {
+        font-size: calc(0.5em + 1vw);
+    }
+}
