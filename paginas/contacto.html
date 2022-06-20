@@ -54,11 +54,19 @@
 
     <section class="contacto">
 
+      <div class="titulo_mapa">
+
         <div class="titulo">
           <p class="animate__animated animate__backInRight">Contactenos...</p>
         </div>
-      
-      <div class="elementos">
+
+        <div class="mapa">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.463072353864!2d-64.18261725734506!3d-31.401365324413547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432987026d14d3b%3A0xa8ba8f9322872075!2sRivadeo%201360%2C%20X5000JEF%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1655736327316!5m2!1ses!2sar" width="100%" height="100%"></iframe>
+        </div>
+     
+      </div>
+
+      <form class="elementos">
         <div class="nombre animate__animated animate__backInRight">
           <label for="nombre">Nombre</label>
           <input type="text" id="nombre" class="nombre1">
@@ -84,17 +92,24 @@
         </div>
   
         <div class="term animate__animated animate__backInRight">
-          <label for="">Acepto términos y condiciones -     </label>
-          <input type="Radio" name="curso" value="1">   Si <!-- al meterle el mismo nombre (name) me obliga a solo seleccionar uno.. si eso.. puedo seleccionar los tres -->
-          <input type="Radio" name="curso" value="2">   No
+          <div>
+          <label for="">Acepto términos y condiciones</label>
+          </div>
+          <div class="si_no">
+          <input type="Radio" name="curso" value="1"> Si <!-- al meterle el mismo nombre (name) me obliga a solo seleccionar uno.. si eso.. puedo seleccionar los tres -->
+          </div>
+          <div class="si_no">
+          <input type="Radio" name="curso" value="2"> No
+          </div>
         </div>
-      
+        
         <div class="enviar animate__animated animate__backInRight">
           <input type="submit" value="Enviar ahora" class="bot_enviar">
           <input type="reset" value="Borrar todo" class="bot_reset">
         </div>
-      </div>
-      
+        
+      </form>
+
     </section>
 
 
@@ -113,7 +128,7 @@
       </div>
 
       <div class="contacto3">
-        <p>Calle A 123</p>
+        <p>Rivadeo 1360, Cba</p>
       </div>
 
       <div class="social">

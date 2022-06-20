@@ -98,6 +98,27 @@ section .imagenes, .contacto .imagenes {
   padding: 30px;
 }
 
+section .ideas, .contacto .ideas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .items, .contacto .items {
+  position: relative;
+  left: 1%;
+}
+
 section .clientes1, .contacto .clientes1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -106,7 +127,7 @@ section .clientes1, .contacto .clientes1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 100%;
+  width: 100%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
@@ -136,13 +157,13 @@ section .clientes, .contacto .clientes {
 }
 
 section .imagenes, .contacto .imagenes {
-  width: 100%;
+  width: 80%;
   margin: 0.5%;
 }
 
 @media screen and (max-width: 750px) {
   section .imagenes, .contacto .imagenes {
-    width: 80%;
+    width: 60%;
     margin: 1%;
   }
 }
@@ -154,9 +175,9 @@ section .imagenes, .contacto .imagenes {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  min-height: -webkit-min-content;
-  min-height: -moz-min-content;
-  min-height: min-content;
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
 }
 
 @media screen and (max-width: 600px) {
@@ -168,12 +189,42 @@ section .imagenes, .contacto .imagenes {
   }
 }
 
-.contacto .titulo {
+.contacto input:focus {
+  height: calc(5vw);
+  background-color: #df9b9b;
+}
+
+.contacto .titulo_mapa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contacto .titulo_mapa .mapa {
+  width: 80%;
+  height: 70%;
+  margin: 15%;
+}
+
+.contacto .titulo_mapa .titulo {
   font-size: calc(1.5em + 1.5vw);
   padding: 8%;
   -webkit-transform: rotate(350deg);
           transform: rotate(350deg);
   color: red;
+  position: relative;
+  top: 5%;
 }
 
 .contacto .elementos {
@@ -193,11 +244,6 @@ section .imagenes, .contacto .imagenes {
 
 .contacto .nombre1 {
   width: 60%;
-}
-
-.contacto input:focus {
-  height: calc(5vw);
-  background-color: #df9b9b;
 }
 
 .contacto .email {
@@ -250,7 +296,25 @@ section .imagenes, .contacto .imagenes {
   color: white;
   font-size: calc(0.5em + 0.5vw);
   padding: 10px;
-  margin: 2%;
+  margin: 1%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 70%;
+}
+
+.contacto .term :focus {
+  height: calc(2vw);
 }
 
 .contacto .enviar {

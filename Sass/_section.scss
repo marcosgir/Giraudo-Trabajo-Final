@@ -37,11 +37,26 @@ section
         padding: 30px;
     }
 
+    .ideas
+    {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .items
+    {
+        position: relative;
+        left: 1%;
+    }
+
     .clientes1
     {
         display: flex;
         flex-direction: row;
-        height: 100%;
+        width: 100%;
         justify-content: space-around;
         align-items: center;
     }
@@ -61,10 +76,9 @@ section
         justify-content: center;
     }
 
-
     .imagenes
     {
-        width: 100%;
+        width: 80%;
         margin: 0.5%;
     }
     
@@ -72,7 +86,7 @@ section
     {
     .imagenes
         {
-        width: 80%;
+        width: 60%;
         margin: 1%;
         }
     } 
@@ -98,7 +112,7 @@ section
     @extend section;
     justify-content: space-around;
     flex-direction: row;
-    min-height: min-content;
+    min-height: max-content;
 
 
     @media screen and (max-width: 600px)
@@ -106,10 +120,36 @@ section
         flex-direction: column;
     }
 
-    .titulo
+    input:focus
     {
-        @include formato_titulo;
-        color:$color_titulo;
+        height: calc(5vw);
+        background-color: rgb(223, 155, 155);
+    }
+
+    .titulo_mapa
+    {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        justify-content: space-around;
+
+         .mapa
+        {
+          width: 80%; 
+          height: 70%;
+          margin: 15%;
+        } 
+
+        .titulo
+        {
+            @include formato_titulo;
+            color:$color_titulo;
+            position: relative;
+            top: 5%;
+        }
+
     }
 
     .elementos
@@ -131,12 +171,6 @@ section
     .nombre1
     {
         width: 60%;
-    }
-
-    input:focus
-    {
-        height: calc(5vw);
-        background-color: rgb(223, 155, 155);
     }
 
     .email
@@ -193,7 +227,17 @@ section
         color:white;
         font-size: calc(0.5em + 0.5vw);
         padding: 10px;
-        margin: 2%;
+        margin: 1%;
+        justify-content:space-between;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        width: 70%;
+        
+        :focus
+        {
+            height: calc(2vw);
+        }
     }
 
     .enviar
