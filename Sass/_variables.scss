@@ -1,4 +1,4 @@
-$fuente: 'Times New Roman', Times, serif;
+$fuente: 'BankGothic Md BT', Times, serif;
 
 $colores: 
 (
@@ -9,6 +9,7 @@ $colores:
 );
 
 $color_titulo: map-get($map: $colores, $key: titulo);
+$color_subtitulos: yellow;
 $color_section: map-get($map: $colores, $key: section);  
 $color_footer: map-get($map: $colores, $key: footer);    
 $texto_footer: map-get($map: $colores, $key: texto_footer);

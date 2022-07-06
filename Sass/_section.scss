@@ -10,15 +10,29 @@ section
     .titulo
     {
         color:$color_titulo;
-        font-size: calc(0.5em + 1.5vw);
-        padding: 30px;
+        padding: 10px;
+        margin: 30px;
         font-family:$fuente;
+        text-align: center;
+        background-color:darkblue;
+        border-radius: 4ch;
+    }
+
+    .titulo2
+    {
+        color:blue;
+        padding: 10px;
+        margin: 30px;
+        font-family:$fuente;
+        text-align: center;
+        background-color:black;
+        border-radius: 4ch;
     }
 
     .parrafo
     {
         color:$color_section;
-        font-size: calc(1em + 0.8vw);
+        font-size: calc(0.7em + 0.8vw);
         padding: 40px;
         font-family:$fuente;
         align-content: center;
@@ -28,8 +42,65 @@ section
     {
         padding: 20px;
         display: flex;
-        width:calc(85vw);
+        width:calc(50vw);
         justify-content: center;
+
+        @media screen and (max-width: 600px)
+        {
+            width:calc(90vw);
+        }
+    }
+
+    .video1
+    {
+        padding: 20px;
+        display: flex;
+        width:calc(50vw);
+        height: calc(30vw);
+        justify-content: center;
+
+        @media screen and (max-width: 600px)
+        {
+        width:calc(90vw);
+        height: calc(50vw);
+        }
+    }
+
+    .informacion
+    {
+        padding: 20px;
+        display: flex;
+        width:100%;
+        justify-content: space-between;
+
+        @media screen and (max-width: 600px)
+        {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .informacion2
+    {
+        padding: 20px;
+        display: flex;
+        width:100%;
+        justify-content:center;
+        @media screen and (max-width: 600px)
+        {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .detalles
+    {
+        display: flex;
+        margin: 5%;
+        align-items: center;
+        font-family:$fuente;
+        color:$color_subtitulos;
+        font-size: calc(0.5em + 1.5vw);
     }
 
     .imagenes
@@ -42,7 +113,6 @@ section
         display: flex;
         flex-direction: row;
         width: 100%;
-        justify-content: space-around;
         align-items: center;
     }
 
@@ -78,24 +148,16 @@ section
 
     .imagenes
     {
-        width: 80%;
+        width: 100%;
         margin: 0.5%;
     }
-    
-    @media screen and (max-width: 750px)
-    {
-    .imagenes
-        {
-        width: 60%;
-        margin: 1%;
-        }
-    } 
+
 } 
 
 @mixin formato_titulo 
 {
     font-size: calc(1.5em + 1.5vw);
-    padding: 8%;
+    padding: 2%;
     transform:rotate(350deg); 
 }
 
@@ -103,7 +165,7 @@ section
 {
     font-size: calc(0.5em + 1.5vw);
     padding: 7px;
-    width: 80%;
+    width: 100%;
     margin: 2%;
 }
 
@@ -145,9 +207,13 @@ section
         .titulo
         {
             @include formato_titulo;
-            color:$color_titulo;
+            color:blue;
             position: relative;
             top: 5%;
+            font-size: calc(1.5em + 1.5vw);
+            padding: 2%;
+            transform:rotate(350deg); 
+            background-color: black;
         }
 
     }
@@ -164,13 +230,13 @@ section
         color:white;
         font-size: calc(0.5em + 1.5vw);
         padding: 7px;
-        width: 80%;
+        width: 100%;
         margin: 2%;
     }
 
     .nombre1
     {
-        width: 60%;
+        width: 100%;
     }
 
     .email
@@ -181,7 +247,7 @@ section
 
     .email1
     {
-        width: 70%;
+        width: 100%;
     }
 
     .pass
@@ -190,24 +256,27 @@ section
         font-size: calc(0.5em + 1.5vw);
         padding: 5px;
         margin: 2%;
+        width: 100%;
     }
 
     .pass1
     {
-        width: 48%;
+        width: 100%;
     }
 
     .coment
     {
         display: flex;
-        padding: 5px;
+        padding: 7px;
+        width: 100%;
     }
 
     .coment1
     {
-        width:calc(35vw);
+/*         width:calc(35vw); */
         height: calc(15vw);
         margin: 2%;
+        width: 100%;
     }
 
     textarea:focus
@@ -219,6 +288,7 @@ section
     {
         color:white;
         font-size: calc(0.5em + 1vw);
+        padding: 7px;
         margin: 2%;
     }
 
@@ -226,8 +296,8 @@ section
     {
         color:white;
         font-size: calc(0.5em + 0.5vw);
-        padding: 10px;
-        margin: 1%;
+        padding: 7px;
+        margin: 2%;
         justify-content:space-between;
         display: flex;
         align-items: center;
@@ -243,7 +313,7 @@ section
     .enviar
     {
         color:white;
-        padding: 5px;
+        padding: 7px;
         margin: 2%;
     }   
 
