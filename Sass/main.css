@@ -236,6 +236,10 @@ section .clientes1, .contacto .clientes1 {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  section .clientes1 .imagenes, .contacto .clientes1 .imagenes {
+    width: 65%;
+    margin: 0.5%;
+  }
 }
 
 section .clientes, .contacto .clientes {
@@ -251,7 +255,7 @@ section .clientes, .contacto .clientes {
 }
 
 section .imagenes, .contacto .imagenes {
-  width: 100%;
+  width: 75%;
   margin: 0.5%;
 }
 
