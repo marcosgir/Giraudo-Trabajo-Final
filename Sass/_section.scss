@@ -157,6 +157,18 @@ section
         margin: 0.5%;
     }
 
+    .carrusel
+    {
+        width: 90%;
+        margin: 2%;
+        @media screen and (max-width: 600px)
+        {
+            position: relative;
+            top: 8%;
+            margin: 0.5%;
+        }
+    } 
+    
 } 
 
 @mixin formato_titulo 
@@ -181,7 +193,30 @@ section
     flex-direction: row;
     min-height: max-content;
 
-
+    @keyframes efecto
+    {
+        0%
+        {
+            transform: rotatex(0deg) ;
+        }
+        25%
+        {
+            transform: rotatex(90deg);
+        }
+        50%
+        {
+            transform: rotatex(180deg);
+        }
+        75%
+        {
+            transform: rotatex(270deg);
+        }
+        100%
+        {
+            transform: rotatex(360deg);
+        }
+    }
+    
     @media screen and (max-width: 600px)
     {
         flex-direction: column;
@@ -191,6 +226,10 @@ section
     {
         height: calc(5vw);
         background-color: rgb(223, 155, 155);
+        @media screen and (max-width: 600px)
+        {
+            height: calc(10vw);
+        }
     }
 
     .titulo_mapa
@@ -219,6 +258,7 @@ section
             padding: 2%;
             transform:rotate(350deg); 
             background-color: black;
+            animation: efecto 5s linear 0s infinite;
         }
 
     }

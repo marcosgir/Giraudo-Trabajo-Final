@@ -259,6 +259,19 @@ section .imagenes, .contacto .imagenes {
   margin: 0.5%;
 }
 
+section .carrusel, .contacto .carrusel {
+  width: 90%;
+  margin: 2%;
+}
+
+@media screen and (max-width: 600px) {
+  section .carrusel, .contacto .carrusel {
+    position: relative;
+    top: 8%;
+    margin: 0.5%;
+  }
+}
+
 .contacto {
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -269,6 +282,52 @@ section .imagenes, .contacto .imagenes {
   min-height: -webkit-max-content;
   min-height: -moz-max-content;
   min-height: max-content;
+}
+
+@-webkit-keyframes efecto {
+  0% {
+    -webkit-transform: rotatex(0deg);
+            transform: rotatex(0deg);
+  }
+  25% {
+    -webkit-transform: rotatex(90deg);
+            transform: rotatex(90deg);
+  }
+  50% {
+    -webkit-transform: rotatex(180deg);
+            transform: rotatex(180deg);
+  }
+  75% {
+    -webkit-transform: rotatex(270deg);
+            transform: rotatex(270deg);
+  }
+  100% {
+    -webkit-transform: rotatex(360deg);
+            transform: rotatex(360deg);
+  }
+}
+
+@keyframes efecto {
+  0% {
+    -webkit-transform: rotatex(0deg);
+            transform: rotatex(0deg);
+  }
+  25% {
+    -webkit-transform: rotatex(90deg);
+            transform: rotatex(90deg);
+  }
+  50% {
+    -webkit-transform: rotatex(180deg);
+            transform: rotatex(180deg);
+  }
+  75% {
+    -webkit-transform: rotatex(270deg);
+            transform: rotatex(270deg);
+  }
+  100% {
+    -webkit-transform: rotatex(360deg);
+            transform: rotatex(360deg);
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -283,6 +342,12 @@ section .imagenes, .contacto .imagenes {
 .contacto input:focus {
   height: calc(5vw);
   background-color: #df9b9b;
+}
+
+@media screen and (max-width: 600px) {
+  .contacto input:focus {
+    height: calc(10vw);
+  }
 }
 
 .contacto .titulo_mapa {
@@ -320,6 +385,8 @@ section .imagenes, .contacto .imagenes {
   padding: 2%;
   transform: rotate(350deg);
   background-color: black;
+  -webkit-animation: efecto 5s linear 0s infinite;
+          animation: efecto 5s linear 0s infinite;
 }
 
 .contacto .elementos {
